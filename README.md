@@ -6,6 +6,7 @@ Qinertia can also accepts Inertial Measurement Unit (IMU) data to provide a high
 Qinertia offers an intuitive and powerful Graphical User Interface as well as an easy to use and full-featured Command Line Interface (CLI).
 
 Please visit the official Qinertia web page to get more details: https://www.sbg-systems.com/products/qinertia-ins-gnss-post-processing-software/
+
 The full Qinertia documentation can be found here: https://support.sbg-systems.com/sc/qd/latest
 
 # GNSS modes
