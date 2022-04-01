@@ -38,8 +38,12 @@
   "reports": [
     {
       "name": "JSON report",
-      "template": "jsonStandard",
-      "outputDir": "report/json"
+      "template": "Minimal JSON",
+      "outputDir": "reports/json"
+    },
+    {
+      "name": "PDF report",
+      "template": "Full PDF"
     }
   ]
 }

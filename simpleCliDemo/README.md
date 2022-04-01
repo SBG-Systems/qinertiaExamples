@@ -10,7 +10,7 @@ To start the processing, simple go to the Qinertia CLI directory and type the fo
   qinertia-cli.exe process --license ########## --process-file "pathToData\cliDemo.json"
 
 # Qinertia Version
-This CLI example has been designed and tested for Qinertia 3.0 versions.
+This CLI example has been designed and tested for Qinertia 3.1 versions.
 
 # Legal Notices
 Copyright (C) 2022 SBG Systems - All Rights Reserved
