@@ -1,0 +1,48 @@
+{
+	"name":	"Apogee Lever Arm",
+	"mode":	"normal",
+	"device":	{
+		"productCode":	"APOGEE-E-G3A3",
+		"deviceId":	"050000000",
+		"hwRevision":	"2.2.0.0",
+		"mnfDate":	"08/01/18",
+		"macAddress":	"98:5C:93:00:02:85",
+		"fmwVersion":	"3.0.7027-stable",
+		"imu":	{
+			"productCode":	"APOGEE-ISU-G3A3-V2",
+			"deviceId":	"060000000",
+			"hwRevision":	"2.0.0.0",
+			"btVersion":	"1.9.109-stable",
+			"fmwVersion":	"1.5.27-stable"
+		}
+	},
+	"settings":	{
+		"imu":	{
+			"imuId":	"apogee_i_surface_v1",
+			"leverArmId":	"cover_target"
+		},
+		"sensor":	{
+			"motionProfile":	"marineHarshSurvey",
+			"alignment":	{
+				"rough":	["forward", "right"],
+				"fine":	[0, 0, 0]
+			},
+			"leverArm":	[0.0, 0.0, 0.0],
+			"monitoringPoints":	[[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+		},
+		"modules":	{
+			"gnss1":	{
+				"modelId":	"septentrio",
+				"mode":	"dual_manual",
+				"posRejection":	"auto",
+				"hdtRejection":	"auto",
+				"antenna":	{
+					"antexId":	"Generic",
+					"reference":	"arp",
+					"leverArm1":	[0.0, 0.0, -3.0],
+					"leverArm2":	[2.0, 0.0, -2.5]
+				}
+			}
+		}
+	}
+}

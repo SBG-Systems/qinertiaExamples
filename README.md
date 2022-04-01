@@ -29,8 +29,8 @@ Qinertia is being improved continuously and new features are added to Qinertia C
 Qinertia CLI has been designed to be backward compatible.
 A project working with Qinertia 3.0 should thus still work with future Qinertia releases.
 
-In this repository, you can find demo data for several Qinertia versions to showcase new features.
-Please select the right version according to the Qinertia version you are using.
+In this repository, you can find demo data for each Qinertia versions to showcase new features.
+Please select the right tag version according to the Qinertia version you are using.
 
 # Demo Projets
 Qinertia offers a Command Line Interface (CLI) to automate processing and integrate PPK in a more complex workflow.
@@ -41,5 +41,18 @@ This is a simple NAVSIGHT acquisition used to demonstrate basic Qinertia CLI usa
 This log uses a single base station to compute a post processed tightly coupled INS solution.
 The log has been acquired in a car with a NAVSIGHT-S connected to an APOGEE-I.
 The mechanical configuration has been entered in the NAVSIGHT unit itself and is read by Qinertia automatically.
+
+## Lever Arm Estimation CLI
+Demonstrates how to leverage on Qinertia to estimate GNSS primary and secondary lever arms.
+High Performance SBG Systems INS come with and automatic real time lever arm estimation tools.
+Estimating lever arms require some specific maneuvers and some dynamics.
+
+Qinertia post processing software also offers mechanical installation parameter estimation and has several advantages over a real time estimation.
+The estimation process is more stable and accurate especially in low dynamic environments such as large vessels or planes.
+It can also be used for products such as ELLIPSE that don't have a built in lever arm estimation module.
+
+This example, simply process a calibration acquisition using loosely coupling to compute and export estimated lever arms.
+If you use loosely coupling to estimate mechanical installation parameters, you have to make sure the real time GNSS is providing valid RTK or PPP (Precise Point Positioning) positions.
+Otherwise, please consider using Qinertia Tightly Coupled computations to access centimeter-level accuracy.
 
 Please contact the support team support@sbg-systems.com if you have any question.
