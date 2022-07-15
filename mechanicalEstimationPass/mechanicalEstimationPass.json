@@ -1,0 +1,63 @@
+{
+  "version": "1.1",
+  "project": {
+    "name":"Pre Estimate Lever Arm",
+    "author": "Chuck Berry",
+    "organization": "SBG Systems",
+    "description": "Use Qinertia CLI to estimate mechanical installation parameters and then automatically restart a processing.\nThis project post processes a tightly coupled GNSS/INS solution using NAVSIGHT-S APOGEE-I data.\nThe user supplies a GNSS base station and the datum is overridden to RGF93 by the user.",
+    "type":"sbgECom",
+    "path":"rover/"
+  },
+  "settings": {
+    "gnss": {
+      "trajectory": {
+        "preciseSetup": false
+      },
+      "trueHeading": {
+        "preciseSetup": false
+      }
+    }
+  },
+  "processing": {
+    "motionProfile":"automotive",
+    "type":"insSingle",
+    "mechanicalEstimationPass": true,
+    "bases": [
+      {
+        "positionMode": "published",
+        "position": {
+          "frame": "RGF93"
+        },
+        "antenna": {
+          "type": "TWIVP6050_CONE  NONE"
+        },
+        "data": [
+          "base/sbgs167p.20d"
+        ]
+      }
+    ]
+  },
+  "exports": [
+    {
+      "name":"Export SBET",
+      "profile":"SBET: 200Hz",
+      "outputDir": "export"
+    },
+    {
+      "name":"Export ASCII",
+      "profile":"ASCII: INS at 200Hz",
+      "outputDir": "export"
+    }
+  ],
+  "reports": [
+    {
+      "name": "JSON report",
+      "template": "Minimal JSON",
+      "outputDir": "reports/json"
+    },
+    {
+      "name": "PDF report",
+      "template": "Full PDF"
+    }
+  ]
+}

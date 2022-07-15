@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "project": {
+    "name":"Lever Arm Estimation CLI",
+    "author": "Marvin Berry",
+    "organization": "SBG Systems",
+    "description": "Showcase Qinertia mechanical installation parameters estimation. Survey marine acquisition done with an APOGEE and a Septentrio GNSS receiver",
+    "type":"sbgECom",
+    "path":"rover/"
+  },
+  "settings": {
+    "gnss": {
+      "trajectory": {
+        "preciseSetup": false
+      },
+      "trueHeading": {
+        "preciseSetup": false
+      }
+    }
+  },
+  "processing": {
+    "motionProfile":"marineHarshSurvey",
+    "type":"insLoosely"
+  },
+  "reports": [
+    {
+      "name": "JSON report",
+      "template": "Minimal JSON",
+      "outputDir": "reports/json"
+    },
+    {
+      "name": "PDF report",
+      "template": "Lever Arm PDF"
+    }
+  ]
+}
